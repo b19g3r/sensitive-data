@@ -129,8 +129,8 @@ public class EncryptInterceptor implements Interceptor {
     private <T> T encrypt(Field[] aesFields, T paramsObject) throws Exception {
         for (Field aesField : aesFields) {
             //取出所有被EncryptDecryptField注解的字段
-            SensitiveField Field = aesField.getAnnotation(SensitiveField.class);
-            if (!Objects.isNull(Field)) {
+            SensitiveField field = aesField.getAnnotation(SensitiveField.class);
+            if (!Objects.isNull(field)) {
                 //将此对象的 accessible 标志设置为指示的布尔值。值为 true 则指示反射的对象在使用时应该取消 Java 语言访问检查。
                 aesField.setAccessible(true);
                 Object object = aesField.get(paramsObject);

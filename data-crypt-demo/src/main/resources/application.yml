@@ -3,9 +3,9 @@ spring:
     name: data-crypt-demo
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3311/db_sensitive_data?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&serverZoneId=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/db_sensitive_data?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&serverZoneId=Asia/Shanghai
     username: root
-    password: myrootpassword
+    password: root
     type: com.zaxxer.hikari.HikariDataSource
 logging:
   config: classpath:logback-spring.xml
